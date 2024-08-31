@@ -1,4 +1,4 @@
-package dev.yonsu.xtokafkaservice.config
+package dev.yonsu.microservices.config
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.context.annotation.Configuration

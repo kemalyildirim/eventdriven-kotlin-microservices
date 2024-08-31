@@ -2,9 +2,10 @@ plugins {
     id 'app-conventions'
 }
 
-group = 'dev.yonsu'
+group = 'dev.yonsu.microservices'
 version = '0.0.1-SNAPSHOT'
 
 dependencies {
+    implementation project(path :':app-config-data')
     implementation 'org.twitter4j:twitter4j-stream:4.0.7'
 }

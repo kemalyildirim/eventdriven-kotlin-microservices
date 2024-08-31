@@ -1,13 +1,15 @@
-package dev.yonsu.xtokafkaservice
+package dev.yonsu.microservices.xtokafkaservice
 
-import dev.yonsu.xtokafkaservice.runner.MockKafkaStreamRunner
+import dev.yonsu.microservices.xtokafkaservice.runner.MockKafkaStreamRunner
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
+@ComponentScan(basePackages = ["dev.yonsu.microservices"])
 class Application(
     private val streamRunner: MockKafkaStreamRunner
 ) : CommandLineRunner {

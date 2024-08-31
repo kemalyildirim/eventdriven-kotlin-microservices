@@ -1,3 +1,4 @@
 rootProject.name = 'ms-parent'
 
+include 'app-config-data'
 include 'x-to-kafka-service'

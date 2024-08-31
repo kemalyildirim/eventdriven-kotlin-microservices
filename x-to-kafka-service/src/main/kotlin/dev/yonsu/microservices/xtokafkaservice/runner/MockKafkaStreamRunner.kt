@@ -1,7 +1,7 @@
-package dev.yonsu.xtokafkaservice.runner
+package dev.yonsu.microservices.xtokafkaservice.runner
 
-import dev.yonsu.xtokafkaservice.config.XToKafkaConfigData
-import dev.yonsu.xtokafkaservice.listener.XKafkaStatusListener
+import dev.yonsu.microservices.config.XToKafkaConfigData
+import dev.yonsu.microservices.xtokafkaservice.listener.XKafkaStatusListener
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.stereotype.Component
@@ -16,7 +16,7 @@ import kotlin.random.nextInt
 
 
 @Component
-@ConditionalOnProperty(name = arrayOf("x-to-kafka-service.enable-mock-tweets"), havingValue = "true")
+@ConditionalOnProperty(name = ["x-to-kafka-service.enable-mock-tweets"], havingValue = "true")
 class MockKafkaStreamRunner(
     val configData: XToKafkaConfigData, val statusListener: XKafkaStatusListener
 ) : StreamRunner {

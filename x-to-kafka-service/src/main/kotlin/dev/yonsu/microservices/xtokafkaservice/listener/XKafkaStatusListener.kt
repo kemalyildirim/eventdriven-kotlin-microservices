@@ -1,4 +1,4 @@
-package dev.yonsu.xtokafkaservice.listener
+package dev.yonsu.microservices.xtokafkaservice.listener
 
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
