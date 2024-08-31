@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: x-to-kafka-service
+x-to-kafka-service:
+  enable-mock-tweets: true
+  enable-v2-tweets: false
+  mock-min-tweet-length: 5
+  mock-max-tweet-length: 15
+  mock-sleep-ms: 5000
+  x-keywords:
+    - Java
+    - Kotlin
+    - Kafka
+    - ElasticSearch
