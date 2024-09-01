@@ -2,6 +2,6 @@ plugins {
     id 'app-conventions'
 }
 
-group = 'dev.yonsu.microservices'
+group = 'dev.yonsu.microservices.kafka'
 version = '0.0.1-SNAPSHOT'
 

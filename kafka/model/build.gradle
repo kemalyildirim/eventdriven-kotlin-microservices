@@ -1,0 +1,36 @@
+import org.apache.avro.compiler.specific.SchemaTask
+
+plugins {
+    id 'kotlin-conventions'
+}
+
+group = 'dev.yonsu.microservices.kafka'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+    implementation 'org.apache.avro:avro:1.12.0'
+}
+
+tasks.register("generateAvro", GradleBuild) {
+    def avroSchemasDir = "src/main/resources/avro/"
+    def avroSrcDir = "build/generated-avro-sources-java/"
+    sourceSets.main.java.srcDirs += [avroSrcDir]
+
+    def groupPath = project.group.toString().replace(".", "/") + "/model/"
+    def out = avroSrcDir + groupPath
+    mkdir(out)
+
+    // The Avro code generation logs to the standard streams. Redirect the standard streams to the Gradle log.
+    logging.captureStandardOutput(LogLevel.INFO)
+    logging.captureStandardError(LogLevel.ERROR)
+    def avroFiles = Arrays.asList(new File(avroSchemasDir).listFiles())
+    avroFiles = avroFiles.collect { it.path }
+    doLast {
+        SchemaTask.main(*avroFiles, avroSrcDir)
+    }
+
+}
+
+
+
+
