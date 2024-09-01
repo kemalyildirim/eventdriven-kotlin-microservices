@@ -4,3 +4,10 @@ plugins {
 
 group = 'dev.yonsu.microservices.kafka'
 version = '0.0.1-SNAPSHOT'
+
+dependencies {
+    implementation project(path: ':app-config-data')
+    implementation project(path: ':kafka:model')
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'io.confluent:kafka-avro-serializer:7.4.6'
+}

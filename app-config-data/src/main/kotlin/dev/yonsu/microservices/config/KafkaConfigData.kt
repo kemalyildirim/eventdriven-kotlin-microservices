@@ -13,5 +13,4 @@ data class KafkaConfigData(
     val topicNamesToCreate: List<String> = listOf(),
     val numOfPartitions: Int = 0,
     val replicationFactor: Short = 0
-    ) {
-}
+    )
