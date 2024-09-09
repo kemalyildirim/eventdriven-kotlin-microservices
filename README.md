@@ -1,6 +1,9 @@
 ### Development Milestones
 
 - [x] Gradle sub-modules with buildSrc, Sharing build logic with Gradle conventions.
-- [ ] Producer-consumer services with Kafka
+- [X] Producer module for Kafka
+- [ ] Consumer module for Kafka
+- [ ] Containerization config of application.
+- [ ] Orchestration config for all containers.
 - [ ] ELK Stack (ElasticSearch, Logstash, Kibana)
-- [ ] Containerization and Orchestration Config
+- [ ] Monitoring configuration with Prometheus.
